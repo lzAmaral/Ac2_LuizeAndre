@@ -1,0 +1,27 @@
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 25px;
+  overflow-wrap: anywhere;
+}
+
+li p {
+  margin: 8px 0;
+}
+
+.status {
+  width: fit-content;
+  padding: 3px;
+}
+
+.aberto {
+  background: yellow;
+  color: black;
+}
+
+.devolvido {
+  background: lightgreen;
+  color: black;
+}

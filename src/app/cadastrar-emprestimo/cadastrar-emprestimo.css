@@ -1,0 +1,19 @@
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input {
+  width: 230px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  display: block;
+  margin-top: 10px;
+}
+
+.erro {
+  color: #a00000;
+}

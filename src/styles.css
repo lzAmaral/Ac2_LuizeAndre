@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 12px;
+  font-family: Arial, sans-serif;
+  color: black;
+  background: white;
+}
+
+button {
+  padding: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+:focus-visible {
+  outline: 2px solid blue;
+}

@@ -1,0 +1,16 @@
+<h1>Empréstimos de livros</h1>
+
+<div class="contadores" aria-live="polite">
+  <p>Totais: <strong>{{ totais }}</strong></p>
+  <p>Em aberto: <strong>{{ emAberto }}</strong></p>
+  <p>Devolvidos: <strong>{{ devolvidos }}</strong></p>
+</div>
+
+<app-cadastrar-emprestimo (cadastrar)="cadastrar($event)"></app-cadastrar-emprestimo>
+
+<app-lista-emprestimos
+  [emprestimos]="emprestimos"
+  (remover)="remover($event)"
+  (devolver)="registrarDevolucao($event)">
+</app-lista-emprestimos>
+

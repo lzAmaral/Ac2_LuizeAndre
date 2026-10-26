@@ -1,0 +1,25 @@
+<section class="painel">
+  <h2>Lista de emprestimos</h2>
+
+  @if (emprestimos.length === 0) {
+    <p>Nenhum emprestimo cadastrado</p>
+  }
+
+  <ul>
+    @for (emprestimo of emprestimos; track emprestimo.id) {
+      <li>
+        <p>Pessoa: {{ emprestimo.nomePessoa }}</p>
+        <p>Livro: {{ emprestimo.tituloLivro }}</p>
+        <p>Devolução prevista: <time>{{ formatarData(emprestimo.dataPrevistaDevolucao) }}</time></p>
+        <p class="status" [ngClass]="emprestimo.devolvido ? 'devolvido' : 'aberto'">
+          {{ emprestimo.devolvido ? 'Devolvido' : 'Em aberto' }}
+        </p>
+
+        <button type="button" [disabled]="emprestimo.devolvido" (click)="devolver.emit(emprestimo.id)">
+          Registrar devolução
+        </button>
+        <button class="remover" type="button" (click)="remover.emit(emprestimo.id)">Remover</button>
+      </li>
+    }
+  </ul>
+</section>

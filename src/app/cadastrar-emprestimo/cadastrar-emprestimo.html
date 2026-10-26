@@ -1,0 +1,22 @@
+<section class="painel">
+  <h2>Novo emprestimo</h2>
+
+  <form #formulario="ngForm" (ngSubmit)="enviar(formulario)" novalidate>
+    <label for="nomePessoa">Nome da pessoa</label>
+    <input id="nomePessoa" name="nomePessoa" [(ngModel)]="nomePessoa" required>
+
+    <label for="tituloLivro">Título do livro</label>
+    <input id="tituloLivro" name="tituloLivro" [(ngModel)]="tituloLivro" required>
+
+    <label for="dataPrevistaDevolucao">Data prevista de devolução</label>
+    <input id="dataPrevistaDevolucao" name="dataPrevistaDevolucao" type="date"
+      [(ngModel)]="dataPrevistaDevolucao" required>
+
+    @if (erro) {
+      <p class="erro" role="alert">{{ erro }}</p>
+    }
+
+    <button type="submit">Cadastrar emprestimo</button>
+    <p role="status">{{ mensagem }}</p>
+  </form>
+</section>
